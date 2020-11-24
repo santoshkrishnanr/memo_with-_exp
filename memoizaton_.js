@@ -45,8 +45,17 @@ const fastaddToTime = memoize(addToTime);
 
 
 
+// example to show the usage of memory
 console.log(fastaddToTime(1,11,26));
 console.log(fastaddToTime(1,11,6));
+// example to show calling the same function after 5000 ms to run the function again
 sleep(5000);
 console.log(fastaddToTime(1,11,26));
+
+
+// calling the function multiple times to show the usage of memory
+console.log(fastaddToTime(1,10,26));
+console.log(fastaddToTime(1,10,26));
+sleep(4000);
+console.log(fastaddToTime(1,10,26));
 
