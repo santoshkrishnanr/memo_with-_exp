@@ -4,18 +4,11 @@
 import time
 
 memory = {}
-fake_time =0   #for testing purpose
+
 
 # to get the time in ms
 def time_now():
-    global fake_time
-    return int(round(time.time() * 1000)) + fake_time
-
-
-def incrimenttime(n):
-    global fake_time
-    fake_time=n
-
+    return int(round(time.time() * 1000))
 
 
 # caching
@@ -34,7 +27,7 @@ def memoize(fun, year, month, day, timeout):
 
 
 def resolver(year, month, day):
-    return int(str(year) + str(month) + str(day))
+    return (hex(year) + hex(month) + hex(day))
 
 
 # some function taking arguments and returning data..
