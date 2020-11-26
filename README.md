@@ -33,10 +33,10 @@ memo_with_exp "memoize with expiration"
  *Deleting the values after expiration time can also be implemented to save storage space making volatile result.-auto delete function
    
  *Resolver has to save the value with its unique parameter. As each parameter sent to a function gives a unique result and it has to be saved with unique address
-   * for Example :-address=(year+month+day)
+   * For Example :-address=(year+month+day)
        - for (1+11+1)=(0+1+12) both address are same 13 but output result from function are different.
    
-   * To solve this each parameter is converted to -hex value and used as address
+   * To solve this each argument is converted to -hex value and used as address
       - address= (hex(year)+hex(month)+hex(day))
       - when (1+11+1)!=(0+1+12)
 
@@ -48,22 +48,16 @@ and can be tested using pytest [test_memo.py](https://github.com/santoshkrishnan
 ### Requirements
 For development, you will need Python3 and pytest installed on your environment. Or use [Python](https://www.python.org/downloads/) and [Pytest](https://docs.pytest.org/en/stable/getting-started.html).
  * Download:[memoization.py](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/memoization.py)
- & [test_memo.py](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/test_memo.py) 
+ & [test_memo.py](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/test_memo.py) to install.
  
 ### To Run the Project 
 Go to the file location from terminal and run
 ````
 $python memization.py
 ````
-To check manually 
-````
-    print(memoize(add_to_time, y, m, d, timeout))
-    print(memoize(add_to_time, y, m, d, timeout))
-    time.sleep(timeinsec)
-    print(memoize(add_to_time, y, m, d, timeout))
-````
-To test manually 
- * Timeout store the amount of time (in ms) the value has to be stored of a function name (add_to_time) with parameter(y,m,d)
+To test manually
+ * memoize(add_to_time, y, m, d, timeout)) 
+ * timeout store the amount of time (in ms) the value has to be stored for a function name (add_to_time) with parameter(y,m,d)
  * For Example: 
  ````
     print(memoize(add_to_time, 1, 5, 4, 5000))
@@ -73,12 +67,18 @@ To test manually
 ````   
  * It can be seen that when the function is called for the first time the value is displayed and stored 
  * later when called it it gives the same value(from memory) until the  given timeout time 
- * later when called after the initial timeout time the value is updated, stored and displayed.   
+ * later when called after timeout time (in s) the value is updated, stored and displayed for same arguments.   
  
  
-### Testing the program 
+## Testing the program 
 To test the program [memoization.py](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/memoization.py) using pytest.
-Simply run $pytest after going the file location from terminal.or $pytest<filename.py> -v -s to check each test condition with its printed output.
+After going to the file location from terminal just Run \
+    `````
+    -$Pytest 
+        or
+    -$pytest<filename.py> -v -s 
+    `````
+ To check each test condition with its printed output.
 
 ## Testing conditions:
 * To check the uniqueness of resolver address.\
@@ -90,14 +90,14 @@ Simply run $pytest after going the file location from terminal.or $pytest<filena
       test_memoize(): Is used 
      * It checks the output value by calling twice.
         
-* To check for the time required to return values after executing  the function and to  return from memory.\
+* To check for the time required to return values after executing  the function and to  return value from memory.\
     def test_run_time():
      * Just calculates the time before and after runing a function twice .
          
-* To check for the amount of time value is stored in memory for use\
+* To check for the amount of time value is stored in memory for useage.\
     def test_cached_time():
-    * Calls a function and checks if the function is same for the same parameter until its updated
-    *Gives the time of storing the value.
+    * Calls a function and checks if the function is same for the same argument until its updated
+    * Gives the time of storing the value.
 
 * To check for the amount of time previous value is stored in memory\
     def test_updated_value():
@@ -138,8 +138,10 @@ console.log(fastaddToTime(1,10,26));
 ````
  by changing the sleep("value"); and calling it again the change in value can be observed.
  
-### Additional implementations:
+### Additional Implementations:
 * Data can be stored in a txtfile or database.
 * To save the memory space auto deletion of data function.
-* Implementation of timeout for different values and function call
-     
+* Implementation of timeout for different values and function call for [memoizaton_.js]() file
+* Test cases in JavaScript for [memoizaton_.js]()
+
+   
