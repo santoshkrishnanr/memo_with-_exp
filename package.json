@@ -1,16 +1,25 @@
 {
-  "name": "memoization",
+  "name": "memo_with-_exp",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/b-ono/memoization.git",
-  "author": "Martin Bonetti <martin.bonetti@omicronenergy.com>",
-  "license": "MIT",
+  "description": "basic memoization test",
+  "main": "memoization_.js",
   "scripts": {
-    "test": "mocha test.js"
+    "basic": "memoization_.js"
   },
+  "keywords": [],
+  "author": "santosh",
+  "license": "ISC",
   "dependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0",
-    "sinon": "^6.1.5"
-  }
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santoshkrishnanr/memo_with-_exp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/santoshkrishnanr/memo_with-_exp/issues"
+  },
+  "homepage": "https://github.com/santoshkrishnanr/memo_with-_exp#readme"
 }
