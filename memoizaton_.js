@@ -3,7 +3,7 @@ const memoize = (fn) => {
 
     return function(a,b,c){
         //unique address to store value (resolver)
-        x=a+b+c;
+        x= dec2hexString(a)+dec2hexString(b)+dec2hexString(c);
 
         // if there is some value in this unique address in memory 
         if(memory.has(x)){
