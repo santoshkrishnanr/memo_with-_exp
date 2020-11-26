@@ -110,21 +110,21 @@ Simply run $pytest after going the file location from terminal.or $pytest<filena
     *Gives the time of updating the value.
 
 
-* each test can also be run individually by pytest <filename.py>::<test_fun()>\
+* each test can also be run individually by pytest <filename.py>::<test_fun()> \
 
 
 
-#Memoization using node.js
+##Memoization using node.js
 
 The above described program is written in JavaScript [memoization_.js](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/memoizaton_.js)
 and can be checked using node.js 
 
-##Requirements
+###Requirements
 For development, you will need Node.js and a node global package, npm installed in your environment. Or use [install](https://nodejs.org/en/download/)
 which includes node.js and npm.
 * Download:[memoization_.js](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/memoizaton_.js) and [package.json]()for dependencies using $npm install.
 
-##Run the project
+###Run the project
 
 Go to the file location from terminal and run
 ```
