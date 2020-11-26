@@ -1,7 +1,7 @@
 # memo_with-_exp
 a test project. 
 
-#Description :
+## Description :
 memo_with_exp "memoize with expiration"
 
  * To Creates a function that memoizes the result of func. If resolver is provided,
@@ -9,13 +9,13 @@ memo_with_exp "memoize with expiration"
  * By default, the first argument provided to the memorized function is used as the map cache key. The memorized values
  * timeout after the timeout exceeds. The timeout is in defined in milliseconds.
  
-##Summary
+## Summary
  In Nutshell!! a program function when called gives some output result. But when called again with same arguments should return the value from the memory instead of running the the function agian. hence saving execution time of function.
  
  The value stored (of a particular parameters)can only be used for a particular time. Later when called should be updated by running the given function again. 
  
  
-##Strategy and Implementation:
+### Strategy and Implementation:
 
  *By sending a the time(ms) with the parameters the return value from the function can be stored with an expiry-timestamp
     
@@ -41,16 +41,16 @@ memo_with_exp "memoize with expiration"
       - when (1+11+1)!=(0+1+12)
 
 
-##Memoization using Python
+## Memoization using Python
 The above described program is written in Python [memoization.py](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/memoization.py)
 and can be tested using pytest [test_memo.py](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/test_memo.py)  
 
-###Requirements
+### Requirements
 For development, you will need Python3 and pytest installed on your environment. Or use [Python](https://www.python.org/downloads/) and [Pytest](https://docs.pytest.org/en/stable/getting-started.html).
  * Download:[memoization.py](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/memoization.py)
  & [test_memo.py](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/test_memo.py) 
  
-###To Run the Project 
+### To Run the Project 
 Go to the file location from terminal and run
 ````
 $python memization.py
@@ -80,7 +80,7 @@ To test manually
 To test the program [memoization.py](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/memoization.py) using pytest.
 Simply run $pytest after going the file location from terminal.or $pytest<filename.py> -v -s to check each test condition with its printed output.
 
-####Testing conditions:
+## Testing conditions:
 * To check the uniqueness of resolver address.\
       test_resolver(): Is used 
      * It checks for all the combinations of three variables (y,m,d) each having  the range of values from (0 to 11)
@@ -114,17 +114,17 @@ Simply run $pytest after going the file location from terminal.or $pytest<filena
 
 
 
-##Memoization using node.js
+## Memoization using node.js
 
 The above described program is written in JavaScript [memoization_.js](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/memoizaton_.js)
 and can be checked using node.js 
 
-###Requirements
+### Requirements
 For development, you will need Node.js and a node global package, npm installed in your environment. Or use [install](https://nodejs.org/en/download/)
 which includes node.js and npm.
 * Download:[memoization_.js](https://github.com/santoshkrishnanr/memo_with-_exp/blob/main/memoizaton_.js) and [package.json]()for dependencies using $npm install.
 
-###Run the project
+### Run the project
 
 Go to the file location from terminal and run
 ```
@@ -138,3 +138,8 @@ console.log(fastaddToTime(1,10,26));
 ````
  by changing the sleep("value"); and calling it again the change in value can be observed.
  
+### Additional implementations:
+* Data can be stored in a txtfile or database.
+* To save the memory space auto deletion of data function.
+* Implementation of timeout for different values and function call
+     
